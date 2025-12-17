@@ -3,85 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HELMUT HÖNIGMAYER</title>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <title>XX | Ethik & Strategie</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap">
     <style>
-        /* Schriftart: Open Sans als Fallback */
-        body {
-            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #2c3e50; /* Dunkles Blau-Grau für bessere Lesbarkeit */
-            background-color: #f9f9f9; /* Hellgrauer Hintergrund */
+        /* Skandinavisches Farbschema: Hell, natürlich, vertrauensvoll */
+        :root {
+            --primary-color: #4A6741;       /* Tiefes Grün (Natur, Vertrauen) */
+            --secondary-color: #5E8C61;     /* Hellgrün (Frische) */
+            --accent-color: #D4A574;        /* Warmer Beige-Ton (Wärme) */
+            --light-bg: #F8F8F8;             /* Hellgrau (Weißraum) */
+            --dark-text: #333333;           /* Dunkler Text (Lesbarkeit) */
+            --light-text: #FFFFFF;           /* Weißer Text (Kontrast) */
         }
 
-        /* Navigation */
+        /* Schriftarten: Serifen für Überschriften (Playfair Display), Sans-Serif für Fließtext (Open Sans) */
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Navigation: Schlicht, zentriert */
         nav {
+            background-color: var(--light-bg);
+            padding: 2rem 0;
             text-align: center;
-            background-color: #3498db; /* Blau-Ton für Navigation */
-            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
+
         nav a {
-            margin: 0 0.75rem;
+            margin: 0 1.5rem;
             text-decoration: none;
-            color: #ecf0f1; /* Hellgrau für Kontrast */
+            color: var(--dark-text);
             font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
         }
+
         nav a:hover {
-            color: #f1c40f; /* Gelb-Ton für Hover-Effekt */
+            color: var(--primary-color);
+        }
+
+        /* Hauptinhalt: Weißer Hintergrund, viel Weißraum */
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .blurb {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .blurb img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin: 1rem auto;
+            display: block;
+            border: 3px solid var(--accent-color);
+        }
+
+        /* Footer: Reduziert, klar */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer a:hover {
             text-decoration: underline;
         }
 
-        /* Hauptinhalt */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .blurb {
-            text-align: center;
-            padding: 2rem;
-            background-color: #ffffff; /* Weißer Hintergrund für Inhalt */
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .blurb img {
-            border-radius: 4px;
-            margin: 1rem 0;
-            border: 2px solid #3498db; /* Blau-Ton als Rahmen */
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #2c3e50; /* Dunkles Blau-Grau */
-            color: #ecf0f1; /* Hellgrau für Text */
-            margin-top: 2rem;
-        }
         footer ul {
             list-style: none;
             padding: 0;
         }
+
         footer li {
             margin: 0.5rem 0;
         }
-        footer a {
-            color: #ecf0f1; /* Hellgrau für Links */
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #f1c40f; /* Gelb-Ton für Hover-Effekt */
-            text-decoration: underline;
+
+        /* Vertrauensbildende Elemente: Subtile Akzente */
+        .trust-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/projects.html">Projects</a>
+        <a href="/about.html">About me</a>
+        <a href="/projects.html">Research</a>
         <a href="/publications.html">Publications</a>
         <a href="/media.html">Media</a>
         <a href="/blog.html">Blog</a>
@@ -89,21 +131,21 @@
 
     <div class="container">
         <div class="blurb">
-            Hi there!
-            <p>This page is still under construction.</p>
-            <img src="/CV_HH.jpg" alt="Helmut Hönigmayer" itemprop="image" width="158" height="100">
+            <h1>Ethics and Responsible Research</h1>
+            <img src="/CV_HH.jpg" alt="Porträt von XX">
             <p><strong>Helmut Hönigmayer</strong></p>
             <p>Strategy Officer, Institute for Advanced Studies<br>
-            Independent Ethics Expert</p>
+            Ethics Expert</p>
+            <span class="trust-badge">Zertifizierte Expertise</span>
         </div>
     </div>
 
     <footer>
         <ul>
-            <li><a href="mailto:helmut.hoenigmayer@ihs.ac.at" target="_blank">Email</a></li>
+            <li><a href="mailto:helmut.hoenigmayer@ihs.ac.at">E-Mail</a></li>
             <li><a href="https://github.com/hoenigmayer" target="_blank">GitHub</a></li>
-            <li><a href="https://scholar.google.at/citations?user=RrUuSDEAAAAJ&hl=en" target="_blank">Google Scholar Profile</a></li>
-            <li><a href="https://orcid.org/0000-0003-1086-8359" target="_blank">ORCID Profile</a></li>
+            <li><a href="https://scholar.google.at/citations?user=RrUuSDEAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+            <li><a href="https://orcid.org/0000-0003-1086-8359" target="_blank">ORCID</a></li>
             <li><a href="https://www.linkedin.com/in/helmut-h%C3%B6nigmayer-6b0201a9/" target="_blank">LinkedIn</a></li>
         </ul>
     </footer>

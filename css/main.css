@@ -44,9 +44,9 @@ a:hover {
 
 /* Überschrift h1 */
 h1 {
-    color: #2c3e50; /* Dunkles Blau-Grau (kein Rot) */
+    color: #2c3e50; /* Dunkles Blau-Grau (passt zum Design) */
     font-size: 2.5em;
-    font-family: inherit; /* Erbt die Schriftart von body */
+    font-family: inherit; /* Erbt die Schriftart von body (Open Sans) */
     margin-bottom: 0.5em;
 }
 

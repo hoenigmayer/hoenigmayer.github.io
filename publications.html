@@ -1,37 +1,176 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Publications</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav align="center">
-    		<ul>
-        		
-        		<a href="/">Home</a> &nbsp;
-	        	<a href="/about.html">About</a> &nbsp;
-        		
-			<a href="/projects.html">Projects</a> &nbsp;
-			<a href="/publications.html">Publications</a> &nbsp;
-			<a href="/media.html">Media</a> &nbsp;
-        		<a href="/blog.html">Blog</a> &nbsp;
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Publications</h1>
-				<p>This page is still under construction. </p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:helmut.hoenigmayer@ihs.ac.at" target="_blank">email</a></li>
-        		<li><a href="https://github.com/hoenigmayer" target="_blank">github.com/hoenigmayer</a></li>
-			<li><a href="https://scholar.google.at/citations?user=RrUuSDEAAAAJ&hl=en" target="_blank">My Google Scholar Profile</li>
-			<li><a href="https://orcid.org/0000-0003-1086-8359" target="_blank">My ORCID Profile</li>
-			<li><a href="https://www.linkedin.com/in/helmut-h%C3%B6nigmayer-6b0201a9/" target="_blank">Connect on LinkedIn</a></li>
-			</ul></li>
-		</footer>
-	</body>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmut Hönigmayer | Ethics and Strategy </title>
+    <style>
+        /* Skandinavisches Schwarz-Weiß-Farbschema: Minimalistisch, klar, vertrauensvoll */
+        :root {
+            --primary-color: #1A1A1A;      /* Tiefes Schwarz (für Text und Akzente) */
+            --secondary-color: #F5F5F5;    /* Hellgrau (für Hintergrund) */
+            --accent-color: #B0B0B0;       /* Mittelgrau (für Hervorhebungen) */
+            --light-bg: #FFFFFF;           /* Reinweiß (für Container) */
+            --dark-text: #1A1A1A;          /* Tiefes Schwarz (Lesbarkeit) */
+            --light-text: #F5F5F5;         /* Hellgrau (Kontrast auf dunklem Hintergrund) */
+        }
+
+        /* Schriftarten: Serifen für Überschriften, Sans-Serif für Fließtext */
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: var(--dark-text);
+            background-color: var(--secondary-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Navigation: Schlicht, zentriert */
+        nav {
+            background-color: var(--secondary-color);
+            padding: 2.5rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        nav a {
+            margin: 0 1.75rem;
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 2px;
+        }
+
+        /* Hauptinhalt: Weißer Container */
+        .container {
+            max-width: 900px;
+            margin: 3.5rem auto;
+            padding: 2.5rem;
+            background-color: var(--light-bg);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 2px;
+        }
+
+        .blurb {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .blurb img {
+            border-radius: 50%;
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            margin: 1.5rem auto;
+            display: block;
+            border: 1px solid var(--accent-color);
+        }
+
+        /* Footer: Minimalistisch */
+         footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 1.25rem 0;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+        }
+
+
+        footer a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin: 0 1.25rem;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--light-bg);
+            text-decoration: underline;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer li {
+            margin: 0.6rem 0;
+        }
+
+        /* Vertrauensbildende Elemente */
+        .trust-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--light-bg);
+            padding: 0.4rem 1rem;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        /* Google Fonts einbinden */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap');
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About me</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/publications.html">Publications</a>
+        <a href="/media.html">Media</a>
+        <a href="/blog.html">Blog</a>
+    </nav>
+
+    <div class="container">
+        <div class="blurb">
+            <h1>Publications</h1>
+            <img src="/CV_HH.jpg" alt="Porträt von Helmut">
+            <p><strong>Braun, R., Loeber, A., Vinther Christensen, M., Cohen, J., Frankus, E., Griessler, E., Hönigmayer, H., & Starkbaum, J. (2022). Social labs as temporary intermediary learning organizations to help implement complex normative policies. The case of Responsible Research and Innovation in European science governance. The Learning Organization. https://doi.org/10.1108/TLO-09-2021-0118
+
+Raúl Tabarés, Anne Loeber, Mika Nieminen, Michael J. Bernstein, Erich Griessler, Vincent Blok, Joshua Cohen, Helmut Hönigmayer, Ulrike Wunderle & Elisabeth Frankus (2022): Challenges in the implementation of responsible research and innovation across Horizon 2020, Journal of Responsible Innovation, DOI: 10.1080/23299460.2022.2101211
+
+M. Silvikko de Villafranca, C. Turcanu, M. Yorulmaz, G. Bela, H. Hönigmayer, M. Bruchhausen and J. Kenens (2022) Nuclear dating: sharing experiences, knowledges and views on Responsible Research and Innovation in the nuclear field. Radioprotection. https://doi.org/10.1051/radiopro/2022017
+
+ 
+
+Monographs
+
+Lang, Alexander; Spök, Armin; Gruber, Malte; Harrer, Dominik; Hammer, Caroline; Winkler, Florian; Kaelin, Lukas; Hönigmayer, Helmut; Sommer, Andrea; Wuketich, Milena; Fuchs, Michael and Griessler, Erich (2019) Genome Editing – Interdisziplinäre Technikfolgenabschätzung. TA-SWISS, 2019 (70). Zürich: vdf Hochschulverlag.
+
+Book Contribution
+
+Frankus, E., Hönigmayer, H. (2023). Engaging Stakeholders by Implementing RRI in the Social Lab Process – A Single Case Study. In: Blok, V. (eds) Putting Responsible Research and Innovation into Practice. Library of Ethics and Applied Philosophy, vol 40. Springer, Cham. https://doi.org/10.1007/978-3-031-14710-4_10</strong></p>
+            <p></p>
+            
+        </div>
+    </div>
+
+   <footer>
+    <ul>
+        <li style="display: inline-block; margin: 0 12px;"><a href="mailto:helmut.hoenigmayer@ihs.ac.at">E-Mail</a></li>
+        <li style="display: inline-block; margin: 0 12px;"><a href="https://github.com/hoenigmayer" target="_blank">GitHub</a></li>
+        <li style="display: inline-block; margin: 0 12px;"><a href="https://scholar.google.at/citations?user=RrUuSDEAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+        <li style="display: inline-block; margin: 0 12px;"><a href="https://orcid.org/0000-0003-1086-8359" target="_blank">ORCID</a></li>
+        <li style="display: inline-block; margin: 0 12px;"><a href="https://www.linkedin.com/in/helmut-h%C3%B6nigmayer-6b0201a9/" target="_blank">LinkedIn</a></li>
+    </ul>
+</footer>
+
+</body>
 </html>

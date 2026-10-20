@@ -1,163 +1,62 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helmut Hönigmayer | Ethics and Strategy </title>
-    <style>
-        /* Skandinavisches Schwarz-Weiß-Farbschema: Minimalistisch, klar, vertrauensvoll */
-        :root {
-            --primary-color: #1A1A1A;      /* Tiefes Schwarz (für Text und Akzente) */
-            --secondary-color: #F5F5F5;    /* Hellgrau (für Hintergrund) */
-            --accent-color: #B0B0B0;       /* Mittelgrau (für Hervorhebungen) */
-            --light-bg: #FFFFFF;           /* Reinweiß (für Container) */
-            --dark-text: #1A1A1A;          /* Tiefes Schwarz (Lesbarkeit) */
-            --light-text: #F5F5F5;         /* Hellgrau (Kontrast auf dunklem Hintergrund) */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media - Helmut Hönigmayer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#111; --paper:#fff; --hairline:1px solid #111; }
+  * { margin:0; padding:0; box-sizing:border-box; }
 
-        /* Schriftarten: Serifen für Überschriften, Sans-Serif für Fließtext */
-        body {
-            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.8;
-            color: var(--dark-text);
-            background-color: var(--secondary-color);
-            margin: 0;
-            padding: 0;
-        }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Inter', sans-serif; font-weight: 300;
+    min-height: 100vh;
+  }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
+  /* This page loads inside the index.html stage iframe:
+     masthead, navigation and footer live in the parent document. */
 
-        /* Navigation: Schlicht, zentriert */
-        nav {
-            background-color: var(--secondary-color);
-            padding: 2.5rem 0;
-            text-align: center;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        }
+  section { padding: 3rem 2rem; max-width: 760px; margin: 0 auto; }
 
-        nav a {
-            margin: 0 1.75rem;
-            text-decoration: none;
-            color: var(--dark-text);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
+  h1 {
+    font-family:'Cormorant Garamond', serif; font-weight:400;
+    font-size: clamp(2rem, 5vw, 3rem); letter-spacing:.12em;
+    text-align:center; margin-bottom: 1.5rem;
+  }
+  .sub {
+    font-family:'Cormorant Garamond', serif; font-style:italic;
+    font-size:1.05rem; text-align:center; color:#444; margin-bottom: 2.5rem;
+  }
 
-        nav a:hover {
-            border-bottom: 1px solid var(--primary-color);
-            padding-bottom: 2px;
-        }
-
-        /* Hauptinhalt: Weißer Container */
-        .container {
-            max-width: 900px;
-            margin: 3.5rem auto;
-            padding: 2.5rem;
-            background-color: var(--light-bg);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            border-radius: 2px;
-        }
-
-        .blurb {
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        .blurb img {
-            border-radius: 50%;
-            width: 130px;
-            height: 130px;
-            object-fit: cover;
-            margin: 1.5rem auto;
-            display: block;
-            border: 1px solid var(--accent-color);
-        }
-
-        /* Footer: Minimalistisch */
-         footer {
-            background-color: var(--primary-color);
-            color: var(--light-text);
-            text-align: center;
-            padding: 1.25rem 0;
-            margin-top: 2rem;
-            font-size: 0.8rem;
-        }
-
-
-        footer a {
-            color: var(--light-text);
-            text-decoration: none;
-            margin: 0 1.25rem;
-            transition: color 0.2s ease;
-        }
-
-        footer a:hover {
-            color: var(--light-bg);
-            text-decoration: underline;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        footer li {
-            margin: 0.6rem 0;
-        }
-
-        /* Vertrauensbildende Elemente */
-        .trust-badge {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--light-bg);
-            padding: 0.4rem 1rem;
-            border-radius: 2px;
-            font-size: 0.75rem;
-            margin-top: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
-
-        /* Google Fonts einbinden */
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap');
-    </style>
+  .press { list-style:none; }
+  .press li {
+    padding: 1.2rem 0; border-bottom: 1px solid #e5e5e5;
+    font-size:.85rem; line-height:1.8; letter-spacing:.02em;
+  }
+  .press li:last-child { border-bottom:none; }
+  .press .meta {
+    display:block; font-size:.65rem; letter-spacing:.3em;
+    text-transform:uppercase; color:#555; margin-bottom:.35rem;
+  }
+  .press a { color:var(--ink); }
+  .press a:hover { text-decoration:underline; }
+</style>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About me</a>
-        <a href="/projects.html">Projects</a>
-        <a href="/publications.html">Publications</a>
-        <a href="/media.html">Media</a>
-        <a href="/blog.html">Blog</a>
-    </nav>
 
-    <div class="container">
-        <div class="blurb">
-            <h1>Media</h1>
-<ul>      <p style="text-align: left; font-size: 12px;">
+  <section>
+    <h1>Media</h1>
+    <div class="sub">Press and public contributions</div>
 
-        with Anna Durnova & Johannes Starkbaum: <a href="https://www.derstandard.at/story/2000079118035/elga-gehoert-den-buergern-lasst-sie-mitreden" target="_blank">Elga gehört den Bürgern – lasst sie mitreden!</a>, derStandard.at, 03.05.2018</p></li>  
-            <p></p>
-            </ul>
-        </div>
-    </div>
-
-   <footer>
-    <ul style="list-style-type: square; color: black;">
-        <li style="display: inline-block; margin: 0 12px;"><a href="mailto:helmut.hoenigmayer@ihs.ac.at">E-Mail</a></li>
-        <li style="display: inline-block; margin: 0 12px;"><a href="https://github.com/hoenigmayer" target="_blank">GitHub</a></li>
-        <li style="display: inline-block; margin: 0 12px;"><a href="https://scholar.google.at/citations?user=RrUuSDEAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-        <li style="display: inline-block; margin: 0 12px;"><a href="https://orcid.org/0000-0003-1086-8359" target="_blank">ORCID</a></li>
-        <li style="display: inline-block; margin: 0 12px;"><a href="https://www.linkedin.com/in/helmut-h%C3%B6nigmayer-6b0201a9/" target="_blank">LinkedIn</a></li>
+    <ul class="press">
+      <li>
+        <span class="meta">derStandard.at &nbsp;.&nbsp; 03.05.2018</span>
+        With Anna Durnova &amp; Johannes Starkbaum: <a href="https://www.derstandard.at/story/2000079118035/elga-gehoert-den-buergern-lasst-sie-mitreden" target="_blank">Elga gehört den Bürgern &ndash; lasst sie mitreden!</a>
+      </li>
     </ul>
-</footer>
+  </section>
 
 </body>
 </html>

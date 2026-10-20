@@ -1,209 +1,128 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helmut Hönigmayer | Ethics and Strategy </title>
-    <style>
-        /* Skandinavisches Schwarz-Weiß-Farbschema: Minimalistisch, klar, vertrauensvoll */
-        :root {
-            --primary-color: #1A1A1A;      /* Tiefes Schwarz (für Text und Akzente) */
-            --secondary-color: #F5F5F5;    /* Hellgrau (für Hintergrund) */
-            --accent-color: #B0B0B0;       /* Mittelgrau (für Hervorhebungen) */
-            --light-bg: #FFFFFF;           /* Reinweiß (für Container) */
-            --dark-text: #1A1A1A;          /* Tiefes Schwarz (Lesbarkeit) */
-            --light-text: #F5F5F5;         /* Hellgrau (Kontrast auf dunklem Hintergrund) */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Helmut Hönigmayer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#111; --paper:#fff; --hairline:1px solid #111; }
+  * { margin:0; padding:0; box-sizing:border-box; }
 
-        /* Schriftarten: Serifen für Überschriften, Sans-Serif für Fließtext */
-        body {
-            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.8;
-            color: var(--dark-text);
-            background-color: var(--secondary-color);
-            margin: 0;
-            padding: 0;
-        }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Inter', sans-serif; font-weight: 300;
+    min-height: 100vh;
+  }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
+  /* This page loads inside the index.html stage iframe:
+     masthead, navigation and footer live in the parent document. */
 
-        /* Navigation: Schlicht, zentriert */
-        nav {
-            background-color: var(--secondary-color);
-            padding: 2.5rem 0;
-            text-align: center;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        }
+  section { padding: 3rem 2rem; max-width: 760px; margin: 0 auto; }
+  .rule { max-width: 760px; margin: 0 auto; border-top: var(--hairline); }
 
-        nav a {
-            margin: 0 1.75rem;
-            text-decoration: none;
-            color: var(--dark-text);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
+  h1 {
+    font-family:'Cormorant Garamond', serif; font-weight:400;
+    font-size: clamp(2rem, 5vw, 3rem); letter-spacing:.12em;
+    text-align:center; margin-bottom: 1.5rem;
+  }
+  .sub {
+    font-family:'Cormorant Garamond', serif; font-style:italic;
+    font-size:1.05rem; text-align:center; color:#444; margin-bottom: 2.5rem;
+  }
 
-        nav a:hover {
-            border-bottom: 1px solid var(--primary-color);
-            padding-bottom: 2px;
-        }
-
-        /* Hauptinhalt: Weißer Container */
-        .container {
-            max-width: 900px;
-            margin: 3.5rem auto;
-            padding: 2.5rem;
-            background-color: var(--light-bg);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            border-radius: 2px;
-        }
-
-        .blurb {
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        .blurb img {
-            border-radius: 50%;
-            width: 130px;
-            height: 130px;
-            object-fit: cover;
-            margin: 1.5rem auto;
-            display: block;
-            border: 1px solid var(--accent-color);
-        }
-
-        /* Footer: Minimalistisch */
-         footer {
-            background-color: var(--primary-color);
-            color: var(--light-text);
-            text-align: center;
-            padding: 1.25rem 0;
-            margin-top: 2rem;
-            font-size: 0.8rem;
-        }
-
-
-        footer a {
-            color: var(--light-text);
-            text-decoration: none;
-            margin: 0 1.25rem;
-            transition: color 0.2s ease;
-        }
-
-        footer a:hover {
-            color: var(--light-bg);
-            text-decoration: underline;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        footer li {
-            margin: 0.6rem 0;
-        }
-
-        /* Vertrauensbildende Elemente */
-        .trust-badge {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--light-bg);
-            padding: 0.4rem 1rem;
-            border-radius: 2px;
-            font-size: 0.75rem;
-            margin-top: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
-
-        /* Google Fonts einbinden */
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap');
-    </style>
+  .project { padding: 0 0 3rem; }
+  .project h2 {
+    font-family:'Cormorant Garamond', serif; font-weight:400;
+    font-size: 1.6rem; letter-spacing:.12em; line-height:1.4;
+    margin-bottom: 1rem;
+  }
+  .meta {
+    font-size:.65rem; letter-spacing:.3em; text-transform:uppercase;
+    color:#555; margin-bottom: 1.25rem;
+  }
+  .project p { font-size:.85rem; line-height:1.9; letter-spacing:.02em; margin-bottom:1rem; }
+  .project .label {
+    font-size:.65rem; letter-spacing:.3em; text-transform:uppercase;
+    color:#555; display:block; margin-bottom:.3rem;
+  }
+  .project .more {
+    font-size:.65rem; letter-spacing:.3em; text-transform:uppercase;
+  }
+  .project .more a { color:var(--ink); text-decoration:none; }
+  .project .more a:hover { text-decoration:underline; }
+</style>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About me</a>
-        <a href="/projects.html">Projects</a>
-        <a href="/publications.html">Publications</a>
-        <a href="/media.html">Media</a>
-        <a href="/blog.html">Blog</a>
-    </nav>
 
-    <div class="container">
-        <div class="blurb">
-            <h1>Research Projects</h1>
-     
-            <p style="text-align: left; font-size: 12px;">
-<br>
+  <section>
+    <h1>Research Projects</h1>
+    <div class="sub">Selected European research collaborations</div>
 
-<b>NewHoRRIzon (2017-2021), European Commission - Horizon 2020</b>
-<br><br>
-<b>Contributed as:</b> Co-cordinator, Social Lab Manager (SL19 - EURATOM), Ethics and Data Protection Officer <br><br>
+    <article class="project">
+      <h2>NewHoRRIzon</h2>
+      <div class="meta">2017 &ndash; 2021 &nbsp;.&nbsp; European Commission &ndash; Horizon 2020</div>
+      <p><span class="label">Contributed as</span>
+        Co-coordinator, Social Lab Manager (SL19 &ndash; EURATOM), Ethics and Data Protection Officer</p>
+      <p><span class="label">Objective</span>
+        Increasing acceptance and interest in responsible research and innovation</p>
+      <p><span class="label">Abstract</span>
+        Innovations and research constitute a highly competitive field on a global scale.
+        Advancements in this field can drive significant economic growth, which is why Europe
+        is committed to pursuing excellence in research and innovation in order to maintain its
+        competitiveness in the global market. The EU-funded NewHoRRIzon project aims to leverage
+        Horizon 2020 to demonstrate, promote and plan the widespread adoption and growth of
+        responsible research and innovation (RRI) across the EU and its Member States. To achieve
+        this, the project will collaborate with a diverse group of stakeholders and establish 18
+        social labs, along with tailor-made pilot actions, covering various sectors of Horizon 2020.
+        These initiatives will serve as showcases for the benefits of RRI and its practical applications.</p>
+      <p class="more">Further information via <a href="https://cordis.europa.eu/project/id/741402" target="_blank">CORDIS</a></p>
+    </article>
+  </section>
 
-<b>Objective:</b> Increasing acceptance and interest in responsible research and innovation 
-<br><br>
+  <div class="rule"></div>
 
-<b>Abstract:</b> Innovations and research constitute a highly competitive field on a global scale.
-Advancements in this field can drive significant economic growth, which is why Europe is committed to pursuing excellence in research and innovation in order to maintain its competitiveness in the global market. <br>
-The EU-funded NewHoRRIzon project aims to leverage Horizon 2020 to demonstrate, promote and plan the widespread adoption and growth of responsible research and innovation (RRI) across the EU and its Member States.
-To achieve this, the project will collaborate with a diverse group of stakeholders and establish 18 social labs, along with tailor-made pilot actions, covering various sectors of Horizon 2020. 
-These initiatives will serve as showcases for the benefits of RRI and its practical applications.
-<br><br>
-Further information via: <a href="https://cordis.europa.eu/project/id/741402" target="_blank">CORDIS</a>
-<hr>
-  <p style="text-align: left; font-size: 12px;">
-<b>ENERI - European Network of Research Ethics and Research Integrity (2017-2019), European Commission Horizon 2020</b>
-<br><br>  
-<b>Contributed as:</b> Researcher <br><br>
+  <section>
+    <article class="project">
+      <h2>ENERI &ndash; European Network of Research Ethics and Research Integrity</h2>
+      <div class="meta">2017 &ndash; 2019 &nbsp;.&nbsp; European Commission &ndash; Horizon 2020</div>
+      <p><span class="label">Contributed as</span>Researcher</p>
+      <p><span class="label">Objective</span>
+        To establish a collaborative platform and workshops for stakeholder exchange, develop training
+        and certification systems to build expertise, and create an e-Community with methodologies to
+        monitor EU compliance&mdash;strengthening research ethics and integrity across Europe.</p>
+      <p><span class="label">Abstract</span>
+        Fostering ethical expertise is crucial to regain public confidence in science. ENERI seeks
+        to strengthen integrity and ethics in science by building an integrated network of RE and RI
+        experts. RE and RI are two sides of the same coin, namely the responsible and ethical conduct
+        of research. While RE addresses the application of ethical principles to the different fields
+        of study, RI refers to conducting studies in accordance with pertinent legal and professional
+        frameworks. Hence, RE and RI jointly form the normative foundation excellent science is based on.</p>
+      <p class="more">Further information via <a href="https://eneri.eu/the-project/" target="_blank">Eneri.eu</a></p>
+    </article>
+  </section>
 
-<b>Objective:</b> To establish a collaborative platform and workshops for stakeholder exchange, develop training and certification systems to build expertise, and create an e-Community with methodologies to monitor EU compliance—strengthening research ethics and integrity across Europe. 
-<br><br>
-<b>Abstract:</b> Fostering ethical expertise is crucial to regain public confidence in science. 
-      ENERI seeks to strengthen integrity and ethics in science by building an integrated network of RE and RI experts. 
-      RE and RI are two sides of the same coin, namely the responsible and ethical conduct of research. 
-      While RE addresses the application of ethical principles to the different fields of study, RI refers to conducting studies in accordance with pertinent legal and professional frameworks. 
-      Hence, RE and RI jointly form the normative foundation excellent science is based on.<br><br>
-Further information via: <a href="https://eneri.eu/the-project/" target="_blank">Eneri.eu</a>
-<hr>
-<p style="text-align: left; font-size: 12px;">
-<b>Stakeholders Acting Together On the ethical impact assessment of Research and Innovation (SATORI), European Commission, FP7 (2016 - 2017)</b>
-<br><br>
-<b>Contributed as:</b> Researcher <br><br>
+  <div class="rule"></div>
 
-<b>Objective:</b> Developing a robust and inclusive ethics assessment framework through rigorous analysis, established ethical principles, and participatory stakeholder engagement—ensuring broad applicability across Europe and beyond. 
-<br><br>
-
-<b>Abstract:</b> SATORI is a 45-month project, comprising 17 partners from 12 countries, including an intergovernmental organisation, the aim of which is to improve respect of ethics principles and laws in research and innovation, and to make sure that they are adequately adapted to the evolution of technologies and societal concerns. 
-The partners will develop an ethics assessment framework based on thorough analysis, commonly accepted ethical principles, participatory processes and engagement with stakeholders, including the public, in Europe and beyond.
-<br><br>
-Further information via: <a href="https://satoriproject.eu/the-project/" target="_blank">Satori.eu</a>
-
-
-
-                
-            </p>
-            
-        </div>
-    </div>
-
-   <footer>
-    <ul>
-        <li style="display: inline-block; margin: 0 12px;"><a href="mailto:helmut.hoenigmayer@ihs.ac.at">E-Mail</a></li>
-        <li style="display: inline-block; margin: 0 12px;"><a href="https://github.com/hoenigmayer" target="_blank">GitHub</a></li>
-        <li style="display: inline-block; margin: 0 12px;"><a href="https://scholar.google.at/citations?user=RrUuSDEAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-        <li style="display: inline-block; margin: 0 12px;"><a href="https://orcid.org/0000-0003-1086-8359" target="_blank">ORCID</a></li>
-        <li style="display: inline-block; margin: 0 12px;"><a href="https://www.linkedin.com/in/helmut-h%C3%B6nigmayer-6b0201a9/" target="_blank">LinkedIn</a></li>
-    </ul>
-</footer>
+  <section>
+    <article class="project">
+      <h2>SATORI &ndash; Stakeholders Acting Together On the ethical impact assessment of Research and Innovation</h2>
+      <div class="meta">2016 &ndash; 2017 &nbsp;.&nbsp; European Commission &ndash; FP7</div>
+      <p><span class="label">Contributed as</span>Researcher</p>
+      <p><span class="label">Objective</span>
+        Developing a robust and inclusive ethics assessment framework through rigorous analysis,
+        established ethical principles, and participatory stakeholder engagement&mdash;ensuring broad
+        applicability across Europe and beyond.</p>
+      <p><span class="label">Abstract</span>
+        SATORI is a 45-month project, comprising 17 partners from 12 countries, including an
+        intergovernmental organisation, the aim of which is to improve respect of ethics principles
+        and laws in research and innovation, and to make sure that they are adequately adapted to the
+        evolution of technologies and societal concerns. The partners will develop an ethics assessment
+        framework based on thorough analysis, commonly accepted ethical principles, participatory
+        processes and engagement with stakeholders, including the public, in Europe and beyond.</p>
+      <p class="more">Further information via <a href="https://satoriproject.eu/the-project/" target="_blank">Satori.eu</a></p>
+    </article>
+  </section>
 
 </body>
 </html>
